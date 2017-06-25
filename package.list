@@ -1,0 +1,8 @@
+
+django
+djangorestframework
+markdown
+django-filter
+
+psycopg2
+MySQL-python   #libmysqlclient-dev
