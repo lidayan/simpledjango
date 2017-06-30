@@ -16,7 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from polls.views import test
 urlpatterns = [
+
+    url(r'^weixintest/', test),
+
     url(r'^admin/', admin.site.urls),
     url(r'^polls/', include('polls.urls')),
     # url(r'^grimlock/gitlab/', include('_gitlab.urls', namespace='_gitlab')),

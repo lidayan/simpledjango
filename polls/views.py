@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views import generic
@@ -66,3 +67,7 @@ def vote(request, pk=None):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+
+def test(request):
+    return HttpResponse('hello')
